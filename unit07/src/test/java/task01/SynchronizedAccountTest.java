@@ -32,7 +32,8 @@ public class SynchronizedAccountTest {
 
         assertThat(account1.getBalance(),is(200.0));
         assertThat(account2.getBalance(),is(0.0));
-//        assertThat(account3.getBalance(),is(800.0));
+        assertThat(account3.getBalance(),is(800.0));
+        assertThat(account4.getBalance(),is(800.0));
     }
 
     @Test
@@ -52,5 +53,6 @@ public class SynchronizedAccountTest {
         assertThat(account1.getBalance(),is(200.0));
         assertThat(account3.getBalance(),is(800.0));
         assertThat(account2.getBalance(),is(0.0));
+        assertThat(account4.getBalance(),is(0.0));
     }
 }

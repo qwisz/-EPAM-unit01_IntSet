@@ -7,7 +7,7 @@ public class SynchronizedAccount implements Account {
 
     private final int id;
     private double credit;
-    private static final Object objLock = new Object();
+    private static final Object objectLock = new Object();
 
     public SynchronizedAccount(int id, double credit) {
         this.id = id;
@@ -38,7 +38,7 @@ public class SynchronizedAccount implements Account {
 
     private void proceed(double credit){
 
-        synchronized (objLock){
+        synchronized (objectLock){
             this.credit += credit;
         }
     }
